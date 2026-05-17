@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng ký tài khoản - LLT Jewelry</title>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", Times, serif;
+}
+
+body{
+    background: #ffd7e7;
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 90px;
+    background: rgba(78,78,78,0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1; 
+    height: 30px;
+    width: 30px; 
+    border-radius: 20px;
+    transition: width 0.5s ease; 
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.search-container:hover {
+    width: 250px;
+    padding-left: 15px;
+}
+
+.search-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    font-style: italic; 
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+.search-container:hover .search-input {
+    opacity: 1;
+}
+
+.search-icon ion-icon {
+    font-size: 22px; 
+    color: #333;      
+    display: block;
+}
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.cart-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.cart-icon {
+    text-decoration: none;   
+    color: #fff;             
+    font-size: 26px;         
+    display: flex;           
+    transition: 0.3s;        
+}
+
+.cart-icon:hover {
+    color: #ff74ac;          
+}
+
+.cart-count {
+    position: absolute;      
+    top: -5px;               
+    right: -8px;             
+    background-color: #ff74ac; 
+    color: white;            
+    font-size: 10px;         
+    font-weight: bold;       
+    font-family: 'Montserrat', sans-serif; 
+    width: 18px;             
+    height: 18px;            
+    border-radius: 50%;      
+    display: flex;           
+    align-items: center;     
+    justify-content: center; 
+    border: 2px solid #ffffff;  
+}
+
+.btn-login {
+    white-space: nowrap;     
+    padding: 8px 15px;
+    border: 1px solid #edc1e7;
+    border-radius:10px ;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+    display: block;
+}
+
+.btn-login:hover {
+    box-shadow: 0 0 15px rgb(249, 154, 201);
+}
+
+.logo img{ 
+    height: 60px; 
+}
+
+.title-list{ 
+    display: flex; 
+    list-style: none; gap: 40px; 
+}
+
+.title-list li a{ 
+    text-decoration: none; 
+    color: white; 
+    font-size: 13px; 
+    font-weight: 600; 
+    letter-spacing: 1.5px; 
+    transition: 0.3s; 
+}
+
+.title-list li a:hover{ 
+    color: #edbff7; 
+}
+
+.header-actions{ 
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+.btn-login{ 
+    padding: 8px 15px; 
+    border: 1px solid #edc1e7; 
+    border-radius: 10px; 
+    text-decoration: none; 
+    color: white; 
+    font-size: 13px; 
+    transition: 0.3s; 
+}
+
+.btn-login:hover{ 
+    box-shadow: 0 0 15px rgb(249,154,212); 
+}
+
+.auth-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.auth-container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgb(251, 178, 202);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #f23e95;
+}
+
+.auth-header h2 {
+    font-size: 36px;
+    color: #ff74ac;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.auth-header p {
+    color: #f78bbf;
+    font-size: 16px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ff74ac;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+    background: #fafafa;
+}
+
+.form-group input:focus {
+    border-color: #ff74ac;
+    background: #ffffff;
+    box-shadow: 0 0 5px rgb(240, 131, 175);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background:#ff74ac;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.btn-submit:hover {
+    background: #ff74ac;
+    box-shadow: 0 5px 15px rgb(244, 133, 183);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 15px;
+    color:#ff74ac;
+}
+
+.auth-footer a {
+    color:#ff74ac;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.auth-footer a:hover {
+    color: #ff74ac;
+    text-decoration: underline;
+}
+
+.error-msg {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+    display: none;
+    font-family: Arial, sans-serif;
+}
+
+.toast-notification {
+    position: fixed;
+    bottom: -100px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; 
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: bottom 0.5s ease-in-out;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toast-notification.show {
+    bottom: 40px; 
+}
+
+@media(max-width: 768px) {
+    .title-list { display: none; }
+    .auth-container { padding: 30px 20px; }
+    .auth-header h2 { font-size: 28px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <img src="img/logo.jpg" alt="Logo">
+    </div>
+    <nav class="title">
+        <ul class="title-list">
+            <li><a href="index.html">TRANG CHỦ</a></li>
+            <li><a href="introduction.html">GIỚI THIỆU</a></li>
+            <li><a href="product.html">SẢN PHẨM</a></li>
+            <li><a href="service.html">DỊCH VỤ</a></li>
+            <li><a href="contact.html">LIÊN HỆ</a></li>
+        </ul>
+    </nav>
+    <div class="header-actions">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Tìm kiếm nhanh...">
+            <button class="search-icon">
+                <ion-icon name="search-outline"></ion-icon>
+            </button>
+        </div>
+        <div class="cart-wrapper">
+            <a href="cart.html" class="cart-icon">
+                <ion-icon name="bag-handle-outline"></ion-icon>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+        <a href="register.html" class="btn-login"><b>ĐĂNG KÝ / ĐĂNG NHẬP</b></a>
+    </div>
+</header>
+
+<div class="auth-wrapper">
+    <div class="auth-container">
+        <div class="auth-header">
+            <h2>TẠO TÀI KHOẢN</h2>
+            <p>Trở thành hội viên để nhận ưu đãi đặc quyền</p>
+        </div>
+
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="fullname">Họ và tên *</label>
+                <input type="text" id="fullname" placeholder="Nhập họ và tên của bạn" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" placeholder="Ví dụ: email@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật khẩu *</label>
+                <input type="password" id="password" placeholder="Nhập mật khẩu (ít nhất 6 ký tự)" required minlength="6">
+            </div>
+
+            <div class="form-group">
+                <label for="confirm_password">Nhập lại mật khẩu *</label>
+                <input type="password" id="confirm_password" placeholder="Xác nhận lại mật khẩu" required>
+                <div class="error-msg" id="passwordError">Mật khẩu nhập lại không khớp!</div>
+            </div>
+
+            <button type="submit" class="btn-submit">ĐĂNG KÝ NGAY</button>
+        </form>
+
+        <div class="auth-footer">
+            Đã có tài khoản? <a href="login.html">Đăng nhập tại đây</a>
+        </div>
+    </div>
+</div>
+
+<div class="toast-notification" id="toastMsg">
+    <ion-icon name="checkmark-circle-outline" style="font-size: 24px;"></ion-icon>
+    Đăng ký tài khoản thành công!
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        updateCartCount();
+    });
+
+    function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let totalItems = cart.length; 
+
+        const cartCountElement = document.querySelector('.cart-count');
+        if (cartCountElement) {
+            cartCountElement.textContent = totalItems;
+        }
+    }
+
+    const registerForm = document.getElementById('registerForm');
+    const password = document.getElementById('password');
+    const confirmPassword = document.getElementById('confirm_password');
+    const passwordError = document.getElementById('passwordError');
+    const toastMsg = document.getElementById('toastMsg');
+
+    registerForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        if (password.value !== confirmPassword.value) {
+            passwordError.style.display = 'block';
+            confirmPassword.style.borderColor = 'red';
+        } else {
+            passwordError.style.display = 'none';
+            confirmPassword.style.borderColor = '#e0e0e0';
+
+            toastMsg.classList.add('show');
+            registerForm.reset();
+
+            setTimeout(() => {
+                toastMsg.classList.remove('show');
+            }, 3000);
+        }
+    });
+
+    confirmPassword.addEventListener('input', function() {
+        passwordError.style.display = 'none';
+        confirmPassword.style.borderColor = '#e0e0e0';
+    });
+</script>
+
+</body>
+</html>
