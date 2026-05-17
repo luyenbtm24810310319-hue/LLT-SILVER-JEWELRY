@@ -1,4 +1,3 @@
-
 * { 
     margin: 0; 
     padding: 0; 
@@ -19,10 +18,14 @@ body {
     padding: 40px 0; 
 }
 
+.breadcrumb {
+    margin-bottom: 20px;
+}
+
 .Come-back {
     display: inline-flex;
     align-items: center;
-    gap: 5px; /* Giảm gap một chút để icon < sát vào chữ hơn */
+    gap: 5px; 
     color: #ff74ac;
     font-size: 16px;
     font-weight: bold;
@@ -69,11 +72,11 @@ body {
     cursor: pointer; 
 }
 
-.policy-img img {  
-    width: 320px;  
-    height: 240px;  
-    object-fit: cover;  
-    border-radius: 10px;  
+.policy-img img {   
+    width: 320px;   
+    height: 240px;   
+    object-fit: cover;   
+    border-radius: 10px;   
     display: block;
 }
 
@@ -161,6 +164,18 @@ body {
     font-size: 16px; 
 }
 
+/* CSS bổ sung để sửa lỗi thụt lề của danh sách lồng trong table */
+.table-list {
+    padding-left: 25px !important;
+    margin-bottom: 0 !important;
+}
+
+.table-list li {
+    list-style: disc !important;
+    margin-bottom: 5px !important;
+    text-align: left !important;
+}
+
 /* Bảng quy định */
 .styled-table { 
     width: 100%; 
@@ -196,17 +211,52 @@ body {
     font-weight: bold; 
 }
 
+/* Khung bọc chống tràn viền bảng khi co nhỏ màn hình */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 25px 0;
+}
+
+/* Responsive mượt cho Mobile */
 @media(max-width: 900px) {
+    .container {
+        width: 95%;
+        padding: 20px 0;
+    }
+    .top-header {
+        margin-bottom: 30px;
+    }
+    .top-header h2 {
+        font-size: 24px;
+    }
     .policy-item { 
         flex-direction: column; 
         text-align: center; 
+        gap: 20px;
+        padding: 15px;
     }
     .policy-img img { 
         width: 100%; 
         height: auto; 
+        max-width: 400px;
+    }
+    .policy-info h3 {
+        font-size: 20px;
+    }
+    .policy-info p {
+        font-size: 15px;
+    }
+    #detail-view {
+        padding: 20px;
     }
     .styled-table { 
-        display: block; 
-        overflow-x: auto; 
+        width: 100%;
+        margin: 0;
+    }
+    .styled-table th, .styled-table td {
+        padding: 10px;
+        font-size: 13px;
     }
 }
