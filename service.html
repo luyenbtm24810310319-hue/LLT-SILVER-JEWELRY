@@ -9,8 +9,7 @@
 <body>
     
 <main class="container">
-     <!-- NÚT QUAY LẠI -->
-    <div class="breadcrumb">
+     <div class="breadcrumb">
         <a href="product.html" class="Come-back">
             <ion-icon name="arrow-back-outline"></ion-icon> Quay lại
         </a>
@@ -92,65 +91,69 @@
         'giao-hang': `
             <h1>Chính sách giao hàng</h1>
             <h2>PHÍ VẬN CHUYỂN</h2>
-            <table class="styled-table">
-                <thead>
-                    <tr>
-                        <th>Đơn hàng</th>
-                        <th colspan="2">Nội thành (Áp dụng tại Hà Nội, Hồ Chí Minh)</th>
-                        <th>Ngoại thành + Tỉnh</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-left"><b>Thời gian</b></td>
-                        <td>Tiêu chuẩn (1 - 3 ngày)</td>
-                        <td>Hoả tốc (*) (Giao hàng 2h - Áp dụng trong giờ hành chính)</td>
-                        <td>Tiêu chuẩn (3 - 5 ngày)</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left"><b>Chi phí</b></td>
-                        <td>Miễn phí vận chuyển</td>
-                        <td>Miễn phí vận chuyển</td>
-                        <td>Miễn phí vận chuyển</td>
-                    </tr>
-                    <tr>
-                        <td class="text-left"><b>COD (Giao hàng thu tiền)</b></td>
-                        <td>Có áp dụng</td>
-                        <td>Có áp dụng</td>
-                        <td>Có áp dụng</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Đơn hàng</th>
+                            <th colspan="2">Nội thành (Áp dụng tại Hà Nội, Hồ Chí Minh)</th>
+                            <th>Ngoại thành + Tỉnh</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left"><b>Thời gian</b></td>
+                            <td>Tiêu chuẩn (1 - 3 ngày)</td>
+                            <td>Hoả tốc (*) (Giao hàng 2h - Áp dụng trong giờ hành chính)</td>
+                            <td>Tiêu chuẩn (3 - 5 ngày)</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left"><b>Chi phí</b></td>
+                            <td>Miễn phí vận chuyển</td>
+                            <td>Miễn phí vận chuyển</td>
+                            <td>Miễn phí vận chuyển</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left"><b>COD (Giao hàng thu tiền)</b></td>
+                            <td>Có áp dụng</td>
+                            <td>Có áp dụng</td>
+                            <td>Có áp dụng</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <p>(*) Đối với ship Hỏa tốc:</p>
             <ul>
-                <li>Dưới 10km: < 2h</li>
-                <li>Trên 10km - < 25km: 4h</li>
+                <li>Dưới 10km: &lt; 2h</li>
+                <li>Trên 10km - &lt; 25km: 4h</li>
             </ul>
 
             <h3 style="text-align: center;">Thời Gian Giao Hàng Hỏa Tốc</h3>
-            <table class="styled-table">
-                <thead>
-                    <tr>
-                        <th>Thời Gian Đặt Hàng</th>
-                        <th>Thời Gian Nhận Hàng</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Trước 09:00</td>
-                        <td>Trước 11:00 cùng ngày</td>
-                    </tr>
-                    <tr>
-                        <td>Từ 09:00 - 16:00</td>
-                        <td>Nhận hàng trong vòng 2h</td>
-                    </tr>
-                    <tr>
-                        <td>Sau 16:00</td>
-                        <td>Trước 11:00 ngày kế tiếp</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Thời Gian Đặt Hàng</th>
+                            <th>Thời Gian Nhận Hàng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Trước 09:00</td>
+                            <td>Trước 11:00 cùng ngày</td>
+                        </tr>
+                        <tr>
+                            <td>Từ 09:00 - 16:00</td>
+                            <td>Nhận hàng trong vòng 2h</td>
+                        </tr>
+                        <tr>
+                            <td>Sau 16:00</td>
+                            <td>Trước 11:00 ngày kế tiếp</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <h3 style="color: #f26d63;">Một số trường hợp đặc biệt trong chính sách vận chuyển cụ thể:</h3>
             <ul>
@@ -220,34 +223,38 @@
             </ul>
 
             <h2>2. Hình thức thanh toán:</h2>
-            <ul>
-                <li>Đối với giao dịch có tổng giá trị từ <b>20.000.000 đồng trở lên (trong 01 ngày/01 khách hàng)</b>, Quý khách vui lòng thực hiện thanh toán thông qua <b>tài khoản thanh toán của khách hàng và tài khoản thanh toán của Công ty</b>.</li>
-            </ul>
+            <p>Đối với giao dịch có tổng giá trị từ <b>20.000.000 đồng trở lên (trong 01 ngày/01 khách hàng)</b>, Quý khách vui lòng thực hiện thanh toán thông qua <b>tài khoản thanh toán của khách hàng và tài khoản thanh toán của Công ty</b>.</p>
 
-            <table class="styled-table">
-                <tr>
-                    <th>Áp dụng</th>
-                    <th>KHÔNG áp dụng</th>
-                </tr>
-                <tr>
-                    <td class="text-left">
-                        <ul>
-                            <li>Chuyển khoản trực tiếp từ tài khoản ngân hàng chính chủ qua ứng dụng ngân hàng hoặc ủy nhiệm chi.</li>
-                            <li>Apple Pay / Samsung Pay <b>liên kết với thẻ ghi nợ (Debit)</b> của khách hàng.</li>
-                            <li>Thẻ ghi nợ (<b>Debit Card, ATM</b>).</li>
-                        </ul>
-                    </td>
-                    <td class="text-left">
-                        <ul>
-                            <li>Thẻ tín dụng (Credit Card), thẻ trả trước (Prepaid).</li>
-                            <li>Ví điện tử (MOMO, ZALOPAY, VNPAY, PAYOO,...).</li>
-                            <li>Thanh toán qua ví trung gian (COD, trung tâm thương mại thu hộ,...).</li>
-                            <li>Phiếu quà tặng LLT Jewelry (cash/e-voucher).</li>
-                            <li>Apple Pay / Samsung Pay liên kết <b>với thẻ tín dụng (Credit)</b>.</li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Áp dụng</th>
+                            <th>KHÔNG áp dụng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left">
+                                <ul class="table-list">
+                                    <li>Chuyển khoản trực tiếp từ tài khoản ngân hàng chính chủ qua ứng dụng ngân hàng hoặc ủy nhiệm chi.</li>
+                                    <li>Apple Pay / Samsung Pay <b>liên kết với thẻ ghi nợ (Debit)</b> của khách hàng.</li>
+                                    <li>Thẻ ghi nợ (<b>Debit Card, ATM</b>).</li>
+                                </ul>
+                            </td>
+                            <td class="text-left">
+                                <ul class="table-list">
+                                    <li>Thẻ tín dụng (Credit Card), thẻ trả trước (Prepaid).</li>
+                                    <li>Ví điện tử (MOMO, ZALOPAY, VNPAY, PAYOO,...).</li>
+                                    <li>Thanh toán qua ví trung gian (COD, trung tâm thương mại thu hộ,...).</li>
+                                    <li>Phiếu quà tặng LLT Jewelry (cash/e-voucher).</li>
+                                    <li>Apple Pay / Samsung Pay liên kết <b>với thẻ tín dụng (Credit)</b>.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <ul>
                 <li>Đối với giao dịch có tổng giá trị <b>dưới 20.000.000 đồng (trong 01 ngày/01 khách hàng)</b>, Quý khách vẫn có thể <b>thanh toán linh hoạt</b> bằng các hình thức thanh toán theo quy định của LLT Jewelry.</li>
@@ -289,66 +296,68 @@
             <p>Tận tâm chăm sóc trang sức của bạn bền đẹp theo thời gian.</p>
             
             <h2>Bảng phí dịch vụ bảo hành và sửa chữa sản phẩm trang sức bạc</h2>
-            <table class="styled-table">
-                <thead>
-                    <tr>
-                        <th rowspan="2">STT</th>
-                        <th rowspan="2">Danh mục sửa chữa</th>
-                        <th colspan="2">Biểu phí</th>
-                    </tr>
-                    <tr>
-                        <th>0-12 tháng</th>
-                        <th>Trên 12 tháng</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td class="text-left">Làm sạch tại cửa hàng</td>
-                        <td colspan="2">Miễn phí trọn đời</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td class="text-left">Đánh bóng và xi mới sản phẩm</td>
-                        <td>Miễn phí lần đầu, từ lần 2 tính phí 50.000đ</td>
-                        <td>Phí 50.000 đ</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td class="text-left">Chỉnh size, nắn nhẫn</td>
-                        <td>Miễn phí lần đầu, từ lần 2 tính phí 50.000đ</td>
-                        <td>Phí 50.000 đ</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td class="text-left">Khắc tên</td>
-                        <td>Miễn phí lần đầu, từ lần 2 tính phí 30.000đ</td>
-                        <td>Phí 30.000 đ</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td class="text-left">Gắn đá trắng tròn</td>
-                        <td>Miễn phí</td>
-                        <td>Phí 30.000 đ/1 lần gắn<br>(chưa bao gồm phí đánh bóng, xi mới)</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td class="text-left">Gắn đá baguette, đá hình, ngọc trai, xà cừ...</td>
-                        <td colspan="2">Tính phí theo bảng giá đá</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td class="text-left">Cắt dây, hàn</td>
-                        <td>Miễn phí lần đầu, từ lần 2 tính phí 50.000đ</td>
-                        <td>Phí 50.000 đ</td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td class="text-left">Thêm chi tiết</td>
-                        <td colspan="2">Phí 50.000 đ</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">STT</th>
+                            <th rowspan="2">Danh mục sửa chữa</th>
+                            <th colspan="2">Biểu phí</th>
+                        </tr>
+                        <tr>
+                            <th>0-12 tháng</th>
+                            <th>Trên 12 tháng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td class="text-left">Làm sạch tại cửa hàng</td>
+                            <td colspan="2">Miễn phí trọn đời</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td class="text-left">Đánh bóng và xi mới sản phẩm</td>
+                            <td>Miễn phí lần đầu, từ lần 2 tính phí 50.000đ</td>
+                            <td>Phí 50.000 đ</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="text-left">Chỉnh size, nắn nhẫn</td>
+                            <td>Miễn phí lần đầu, từ lần 2 tính phí 50.000đ</td>
+                            <td>Phí 50.000 đ</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="text-left">Khắc tên</td>
+                            <td>Miễn phí lần đầu, từ lần 2 tính phí 30.000đ</td>
+                            <td>Phí 30.000 đ</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td class="text-left">Gắn đá trắng tròn</td>
+                            <td>Miễn phí</td>
+                            <td>Phí 30.000 đ/1 lần gắn<br>(chưa bao gồm phí đánh bóng, xi mới)</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td class="text-left">Gắn đá baguette, đá hình, ngọc trai, xà cừ...</td>
+                            <td colspan="2">Tính phí theo bảng giá đá</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td class="text-left">Cắt dây, hàn</td>
+                            <td>Miễn phí lần đầu, từ lần 2 tính phí 50.000đ</td>
+                            <td>Phí 50.000 đ</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td class="text-left">Thêm chi tiết</td>
+                            <td colspan="2">Phí 50.000 đ</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <h2>LƯU Ý:</h2>
             <ul>
